@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vector</title>
+    <script src="dist/vector.js"></script>
+</head>
+<body>
+
+<h1>Векторный тип</h1>
+
+<p>
+    Напишите конструктор Vector, представляющий вектор в двумерном пространстве. Он принимает параметры x и y (числа),
+    которые хранятся в одноимённых свойствах.
+</p>
+
+<p>
+    Дайте прототипу Vector два метода, plus и minus, которые принимают другой вектор в качестве параметра и возвращают
+    новый вектор, который хранит в x и y сумму или разность двух векторов (один this, второй – аргумент).
+</p>
+
+<p>
+    Добавьте геттер length в прототип, подсчитывающий длину вектора – расстояние от (0, 0) до (x, y).
+</p>
+
+// Ваш код<br><br>
+
+console.log(new Vector(1, 2).plus(new Vector(2, 3)));<br>
+// → Vector{x: 3, y: 5}<br>
+console.log(new Vector(1, 2).minus(new Vector(2, 3)));<br>
+// → Vector{x: -1, y: -1}<br>
+console.log(new Vector(3, 4).length);<br>
+// → 5<br>
+
+
+</body>
+</html>
