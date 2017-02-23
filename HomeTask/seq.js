@@ -9,7 +9,7 @@ Seq.prototype.get = function (...arg) {
 }
 
 Seq.prototype.has = function (arg) {
-	return Object.keys(this).some(el => this[el] === +arg, this)
+	return Object.keys(this).some(el => this[el] === +arg, this);
 }
 
 Seq.prototype.next = function () {
@@ -22,4 +22,3 @@ Seq.prototype.next = function () {
 Seq.prototype.toArray = function () {
 	return Object.keys(this).map(el => this[el], this);
 }
-console.log(new Seq([1, 2, 3, 4, 5]));
