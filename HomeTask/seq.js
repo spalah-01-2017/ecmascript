@@ -14,20 +14,19 @@ Seq.prototype.get = function (...arg) {
 
 Seq.prototype.has = function (arg) {
 	return Object.keys(this).some(function (el) {
-		return this[el] === arg;
+		return this[el] === +arg;
 	}, this)
 }
 
 Seq.prototype.next = function () {
 	if (this[this.counter] === undefined) {
 		this.counter = 0;
-		return this[this.counter++];
 	} 
 	return this[this.counter++];
 }
 
 Seq.prototype.toArray = function () {
-	return Object.keys(this).map(function (el, ind) {
+	return Object.keys(this).map(function (el) {
 		return this[el];
 	}, this)
 }
