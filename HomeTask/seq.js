@@ -1,8 +1,6 @@
 function Seq (arr = []) {
 	let counter = 0;
-	arr.forEach(function (el, ind) {
-		this[ind] = el;
-	}, this);
+	arr.forEach((el, ind) => this[ind] = el, this);
 }
 
 Seq.prototype.get = function (...arg) {
@@ -24,5 +22,4 @@ Seq.prototype.next = function () {
 Seq.prototype.toArray = function () {
 	return Object.keys(this).map(el => this[el], this);
 }
-
-console.log(new Seq([1,2,3,4,5,6]).get('4'));
+console.log(new Seq([1, 2, 3, 4, 5]));
