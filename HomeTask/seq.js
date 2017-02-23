@@ -28,6 +28,6 @@ Seq.prototype.next = function () {
 
 Seq.prototype.toArray = function () {
 	return Object.keys(this).map(function (el, ind) {
-		if (+el !== 'string') return this[el];
+		return this[el];
 	}, this)
 }
