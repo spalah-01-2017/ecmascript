@@ -13,9 +13,7 @@ Seq.prototype.has = function (arg) {
 }
 
 Seq.prototype.next = function () {
-	if (this[this.counter] === undefined) {
-		this.counter = 0;
-	} 
+	if (this[this.counter] === undefined) this.counter = 0; 
 	return this[this.counter++];
 }
 
