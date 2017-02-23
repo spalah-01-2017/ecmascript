@@ -12,9 +12,7 @@ class Vector {
 	}
 }
 
-Vector.prototype.plus = function (vec = new Vector ()) {
-	return new Vector (this.x + vec.x, this.y + vec.y)
-}
+Vector.prototype.plus = (vec = new Vector ()) => new Vector (this.x + vec.x, this.y + vec.y);
 
 Vector.prototype.minus = function (vec = new Vector ()) {
 	return new Vector (this.x - vec.x, this.y - vec.y)
@@ -25,3 +23,4 @@ Object.defineProperty(Vector.prototype, 'length', {
 		return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2))
 	}
 })
+console.log(new Vector(1,2).plus(new Vector(2,1)));

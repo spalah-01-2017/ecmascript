@@ -7,15 +7,11 @@ function Seq (arr = []) {
 
 Seq.prototype.get = function (...arg) {
 	if (typeof arg[0] === 'object') arg = arg[0];
-	return arg.map(function (el) {
-		return el in this ? this[el] : null;
-	}, this);
+	return arg.map(el => +el in this ? this[el] : null, this);
 }
 
 Seq.prototype.has = function (arg) {
-	return Object.keys(this).some(function (el) {
-		return this[el] === +arg;
-	}, this)
+	return Object.keys(this).some(el => this[el] === +arg, this)
 }
 
 Seq.prototype.next = function () {
@@ -26,7 +22,7 @@ Seq.prototype.next = function () {
 }
 
 Seq.prototype.toArray = function () {
-	return Object.keys(this).map(function (el) {
-		return this[el];
-	}, this)
+	return Object.keys(this).map(el => this[el], this);
 }
+
+console.log(new Seq([1,2,3,4,5,6]).get('4'));
