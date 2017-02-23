@@ -20,7 +20,3 @@ Seq.prototype.next = function () {
 Seq.prototype.toArray = function () {
 	return Object.keys(this).map(el => this[el]);
 }
-
-let s = new Seq([[1, 3, 4], 3, 4, 'a', 6])
-
-console.log(s.has(6));
