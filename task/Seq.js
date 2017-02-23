@@ -17,6 +17,9 @@ function Seq (...rest) {
 		}
 	}
 	this.next = function() {
-		// ? ? ?
+		if (this.toArray()[this.count] === undefined) {
+			this.count = 0;
+		}
+		return this.toArray()[this.count++];
 	}
 }
