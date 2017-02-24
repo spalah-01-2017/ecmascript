@@ -4,6 +4,8 @@
 
 [ES-2015 сейчас](https://learn.javascript.ru/es-modern-usage)
 
+[Презентация](https://viacheslav-karnaukh.github.io/es_features/part_1)
+
 [Переменные: let и const](https://learn.javascript.ru/let-const)
 
 [Функции](https://learn.javascript.ru/es-function)
